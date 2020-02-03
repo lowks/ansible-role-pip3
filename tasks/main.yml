@@ -1,0 +1,7 @@
+---
+- name: "{{ ansible_distribution | lower }} | {{ ansible_distribution_release }} - Install {{ packages }}"
+  package:
+    name: "{{ packages }}"
+  register: packages_state
+  until: packages_state is succeeded
+  retries: 3
