@@ -1,0 +1,3 @@
+- hosts: all
+  roles:
+     - { role: redbeard28.pip3, tags: mytags }
